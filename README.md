@@ -109,6 +109,9 @@ PRUEBA
   - PUT `/products/{id}`: Actualizar producto
   - DELETE `/products/{id}`: Eliminar producto
 
+Nota: Actualmente, la base de datos no contiene productos ni categorías predefinidos.
+Los usuarios deberán agregar manualmente estos datos utilizando los endpoints proporcionados.
+
 ## Pruebas con Postman
 
 1. Importa la colección de Postman desde el repositorio (`Postman_Collection.json`).
