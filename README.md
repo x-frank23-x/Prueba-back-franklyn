@@ -36,10 +36,10 @@ PRUEBA
 
 1. Clona el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/x-frank23-x/Prueba-back-franklyn.git
    cd PRUEBA
    ```
-2. Crea y activa un entorno virtual (opcional):
+2. Crea y activa un entorno virtual:
    ```bash
    python -m venv venv
    source venv/bin/activate   # En Linux/Mac
