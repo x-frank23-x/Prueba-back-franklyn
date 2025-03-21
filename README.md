@@ -118,3 +118,8 @@ PRUEBA
 
 - Asegúrate de que Docker esté ejecutándose correctamente para usar `docker-compose`.
 - Usa buenas prácticas de seguridad para gestionar las claves y contraseñas.
+
+## Modos de comunicacion
+
+- Correo : xfranklyngarzonx@gmail.com
+- Numero telefonico : 3223351010
