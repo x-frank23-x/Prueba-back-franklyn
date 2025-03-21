@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Productos y Categorías</title>
+    <style>
+      /* General styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      h1 {
+        text-align: center;
+        color: #4caf50;
+        margin-bottom: 30px;
+      }
+
+      section {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: #333;
+        border-bottom: 2px solid #4caf50;
+        padding-bottom: 5px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #4caf50; /* Border destacado */
+        border-radius: 4px;
+        font-size: 14px;
+        background-color: #fdfdfd;
+      }
+
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #45a049; /* Resaltado al enfocar */
+        box-shadow: 0 0 4px rgba(69, 160, 73, 0.5);
+      }
+
+      textarea {
+        resize: none;
+        height: 80px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #ddd;
+        margin: 30px 0;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        body {
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        section {
+          padding: 15px;
+        }
+
+        button {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gestión de Productos y Categorías</h1>
+
+    <!-- Formulario para crear categorías -->
+    <section>
+      <h2>Crear Categoría</h2>
+      <form id="categoryForm" action="/category/create" method="POST">
+        <label for="category_name">Nombre de la Categoría:</label>
+        <input type="text" id="category_name" name="name" required />
+        <button type="submit">Crear Categoría</button>
+      </form>
+    </section>
+
+    <hr />
+
+    <!-- Formulario para crear productos -->
+    <section>
+      <h2>Crear Producto</h2>
+      <form id="productForm" action="/product/create" method="POST">
+        <label for="product_name">Nombre del Producto:</label>
+        <input type="text" id="product_name" name="name" required />
+
+        <label for="product_price">Precio del Producto:</label>
+        <input type="number" id="product_price" name="price" required />
+
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="category">Categoría:</label>
+        <select id="category" name="category_id" required>
+          <!-- Categorías se llenan dinámicamente -->
+        </select>
+
+        <button type="submit">Crear Producto</button>
+      </form>
+    </section>
+
+    <script src="/static/createpro.js"></script>
+  </body>
+</html>
